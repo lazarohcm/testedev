@@ -1,0 +1,220 @@
+
+/*
+* Classes para erros de formulários
+*/
+.erro-formulario > input,
+.erro-formulario > div > input,
+.erro-formulario > buscar-clientes-typeahead > div,
+.erro-formulario > select,
+.erro-formulario > textarea
+{
+    border: 1px solid #FF5050;
+}
+.erro-formulario-mensagem {
+    color: #FF5050;
+    font-size: 10px;
+}
+
+.erro-formulario-mensagem.erro-formulario-invalido {
+    display: block;
+}
+label.required:after {
+    content: " *";
+}
+
+input.ng-pristine {
+   	border: 1px solid #083051;
+}
+
+input.ng-touched.ng-invalid {
+    border: 1px solid #FF5050;
+}
+
+input.ng-touched.ng-valid {
+   	border: 1px solid #083051;
+}
+
+select.ng-pristine {
+   	border: 1px solid #083051;
+}
+
+select.ng-touched.ng-invalid {
+    border: 1px solid #FF5050;
+}
+
+select.ng-touched.ng-valid {
+   	border: 1px solid #083051;
+}
+
+/* .slideThree */
+.Switch {
+	position: relative;
+	display: inline-block;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #ccc;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+	height: 18px;
+	padding: 6px 6px 22px 6px;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 4px;
+	background: #ececec;
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.1), inset 0px 1px 3px 0px rgba(0,0,0,0.1);
+	cursor: pointer;
+	font-size: 16px;
+}
+body.IE7 .Switch { width: 78px; }
+.Switch span {
+	display: inline-block;
+	width: 35px;
+}
+.Switch span.On { color: #44d846; }
+.Switch .Toggle {
+	position: absolute;
+	top: 1px;
+	width: 37px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	background: #fff;
+	background: -moz-linear-gradient(top, #ececec 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffffff));
+	background: -webkit-linear-gradient(top, #ececec 0%, #ffffff 100%);
+	background: -o-linear-gradient(top, #ececec 0%, #ffffff 100%);
+	background: -ms-linear-gradient(top, #ececec 0%, #ffffff 100%);
+	background: linear-gradient(top, #ececec 0%, #ffffff 100%);
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.5);
+	z-index: 999;
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	-ms-transition: all 0.15s ease-in-out;
+}
+.Switch.On .Toggle { left: 2%; }
+.Switch.Off .Toggle { left: 54%; }
+/* Round Switch */
+.Switch.Round {
+	padding: 0px 20px;
+	border-radius: 40px;
+}
+body.IE7 .Switch.Round { width: 1px; }
+.Switch.Round .Toggle {
+	border-radius: 40px;
+	width: 14px;
+	height: 14px;
+}
+.Switch.Round.Off .Toggle {
+	left: 3%;
+	background: #44d846;
+}
+.Switch.Round.On .Toggle { left: 58%; }
+/* end .slideThree */
+
+.tks-page{
+    display: block;
+    margin-bottom: 80px;
+}
+
+.tks-page img{
+    display: block;
+    margin: 0 auto;
+    width:100px;
+}
+
+.tks-page h3{
+    display: block;
+    margin: 0 auto;
+    color: #44d846;
+    margin-top: 20px;
+    font-size: 22pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tks-page h4{
+    display: block;
+    margin: 0 auto;
+    color: #083051;
+    font-size: 12pt;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.tks-page p{
+    display: block;
+    margin: 0 auto;
+    color: #44d846;
+    margin-top: 25px;
+    font-size: 13pt;
+    font-weight: 600;
+    text-align: center;
+}
+
+.tks-page a{
+    color: #44d846;
+    font-weight: 600;
+}
+
+
+.tks-page-boleto{
+    margin-top:30px;
+}
+
+.tks-page-boleto img{
+    width: 50px;
+}
+/*
+* Classes para o BackDrop
+*/
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.3;
+    filter: alpha(opacity=90);
+    z-index: 10010;
+    height: 100%;
+}
+
+#overlay span {
+    position: fixed;
+    top: 60%;
+    left: 50%;
+    margin: 1px 0 0 -35px;
+    color: #fff;
+    text-shadow: 0px 0px #fff;
+    font-size: 12px;
+}
+#loading {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -28px 0 0 -25px;
+}
+
+#loading-bar .peg {
+  opacity: .2;
+  -moz-box-shadow: #fff 1px 0 6px 1px;
+  -ms-box-shadow: #fff 1px 0 6px 1px;
+  -webkit-box-shadow: #fff 1px 0 6px 1px;
+}
+
+#loading-bar .bar {
+  background: #fff;
+  z-index: 15000;
+}
+.bandeiras-cartao img{
+    display: block;
+    margin: 0 auto;
+    max-width: 260px;
+    filter: grayscale(100%);
+    opacity: 0.3;
+}

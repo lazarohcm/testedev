@@ -1,0 +1,5 @@
+
+api_rest_usuario:
+    resource: "ApiRestBundle:Usuario"
+    type:     rest
+    prefix:   /api/usuario

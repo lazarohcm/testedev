@@ -1,0 +1,11 @@
+services:
+    api.service.util.servico_base:
+        abstract: true
+        calls:
+            - [setEntityManager, ["@doctrine.orm.entity_manager"]]
+            - [setFormFactory, ["@form.factory"]]
+    api.service.usuario:
+        class: ApiRestBundle\Service\UsuarioService
+        parent: api.service.util.servico_base
+        calls:
+            - [setRepository, [AppBundle:TbUsuario]]

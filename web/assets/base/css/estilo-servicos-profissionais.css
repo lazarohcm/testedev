@@ -1,0 +1,169 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+h2{
+	color:#083051;
+	font-size: 22pt;
+	font-weight: 700;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#tab-solicitacao-prest-id{
+	margin-top: 0 !important;
+}
+
+
+.tab-solicitacao-prest{
+	border-top:5px solid #44d846;
+}
+
+section{
+	padding: 15px;
+}
+
+.tab-solicitacao-prest-a{
+	background-color: #f1f5f8;
+}
+
+.tab-solicitacao-prest-b{
+	background-color: white;
+}
+
+h6{
+	color:#7d91a0;
+	font-weight: 600;
+	float: left;
+	font-size: 8pt;
+}
+
+.preco-solicitacao-servicos{
+	font-weight: 700;
+	color:#7d91a0;
+	float:right;
+	margin-top: -3px;
+	font-size: 9pt;
+}
+
+.divisor-solicitacao-servicos{
+	border-color:#7d91a0;
+	opacity: 0.2;
+	margin-top: 22px;
+}
+
+.conteudo-solicitacao-servicos{
+	margin-top: -5px;
+}
+
+.ttl-solicitacao-servicos{
+	color:#44d846;
+	font-weight: 600;
+	font-size: 9pt;
+}
+
+.txt-solicitacao-servicos{
+	color:#083051;
+	font-weight: 400;
+	font-size: 11pt;
+}
+
+.bold-azul{
+	color:#083051;
+	font-weight: 600;
+}
+
+.bold-verde{
+	color:#44d846;
+	font-weight: 600;
+}
+
+.local-solicitacao-servico{
+	color:#083051;
+	font-size: 12pt;
+}
+
+.divisor-solicitacao-servicos-dashed{
+	border:1px #7d91a0 dashed;
+	opacity: 0.2;
+}
+
+.btn-u-sm{
+	background: #7ce354; /* Old browsers */
+	background: -moz-linear-gradient(top, #7ce354 0%, #44d846 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #7ce354 0%,#44d846 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #7ce354 0%,#44d846 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7ce354', endColorstr='#44d846',GradientType=0 );
+	font-size: 11pt;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 100px;
+	color:#f1f5f8;
+	font-weight: 600;
+}
+
+.btn-ok-solicitacao-servicos button{
+	float: right;
+}
+
+.btn-nok-sm{
+	background-color: #FA9E53;
+	font-size: 11pt;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 100px;
+	color:#f1f5f8;
+	font-weight: 600;
+}
+
+.local-servico-aceito{
+	color:#44d846;
+	font-size: 9pt;
+	margin-top: -10px;
+}
+
+.conteudo-servicos-confirmados{
+	margin-top: -5px;
+}
+
+.data-servico-aceito{
+	color:#083051;
+	font-weight: 700;
+	font-size: 8pt;
+	margin-bottom: 0;
+}
+
+.btn-blk-all-sm{
+	color:#f1f5f8;
+	background: #083051;
+	padding: 6px 20px;
+	border-radius: 100px;
+	font-weight: 700;
+	margin-top: 9px;
+}
+
+.btn-blk-all-sm:hover{
+	background: #0a3f6b;
+	color:#44d846;
+}
+
+.btn-blk-all-sm:active{
+	color:#44d846;
+}
+
+.btn-blk-all-sm:focus{
+	color:#44d846;
+}
+
+.align-center{
+	display: block;
+	margin: 0 auto;
+}
+
+.btn-cancelar{
+	color:#f1f5f8;
+	background: red;
+	padding: 6px 20px;
+	border-radius: 100px;
+	font-weight: 700;
+}

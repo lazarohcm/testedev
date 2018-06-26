@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Teste Dev eQ!{% endblock %}</title>
+
+        <link rel="stylesheet" href="{{ asset('/bundles/vendor/bootstrap/dist/css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('/bundles/vendor/angular/angular-csp.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/base/plugins/line-icons/line-icons.css?v=1') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/base/plugins/font-awesome/css/font-awesome.min.css?v=1') }}">
+
+        <link rel="stylesheet" href="{{ asset('/assets/base/plugins/sweetalert2/dist/sweetalert2.min.css') }}" rel="stylesheet">
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body ng-app="easyQasaApp">
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ path('homepage')}}">eQ!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li><a href="{{ path('usuario_index')}}">Usuário</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+        <div class="container-fluid">
+            {% block body %}
+
+            {% endblock %}
+        </div>
+
+        <script type="text/javascript" src="{{ asset('/bundles/vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/bundles/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/assets/base/plugins/sweetalert2/dist/sweetalert2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/bundles/vendor/angular/angular.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/vendor/angular-input-masks/angular-input-masks-dependencies.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/vendor/angular-input-masks/angular-input-masks-standalone.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/vendor/angular-input-masks/angular-input-masks.br.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/bundles/vendor/angular-resource/angular-resource.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('/bundles/vendor/angular-sanitize/angular-sanitize.min.js') }}"></script>
+        <script src="{{ asset('js/angular/app.js') }}"></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="/js/fos_js_routes.js"></script>
+
+        {% block javascripts %}
+        {% endblock %}
+    </body>
+</html>

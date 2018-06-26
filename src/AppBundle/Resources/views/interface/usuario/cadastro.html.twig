@@ -1,0 +1,38 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="content" ng-controller="cadastroUsuarioController">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <h1>Usuário</h1>
+            <h4>Cadastro</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+            <form
+            id="formCadastroUsuario"
+            name="formCadastroUsuario"
+            ng-submit="cadastrar()"
+            method="post"
+            >
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    {% include ('AppBundle:interface/usuario:form.html.twig') %}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                    <button type="submit" class="btn btn-success pull-right"> Salvar</button>
+                    <a href="{{ path('usuario_index') }}" class="btn btn-primary pull-right"> Voltar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/angular/usuario/usuario_controller.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="content" ng-controller="indexUsuarioController" ng-init="index()">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <h1>Usuário</h1>
+            <h4>Listagem</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+            <table class="table table-stripped table-bordered">
+                <legend>
+                    <button class="btn btn-success pull-right" ng-click="cadastro();"><i class="fa fa-check"></i> Incluir</button>
+                </legend>
+                <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Situação</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="usuario in usuarios" ng-show="usuarios[0]">
+                        <td><% usuario.id %></td>
+                        <td><% usuario.nome %></td>
+                        <td><% usuario.situacao ? 'Ativo' : 'Inativo' %></td>
+                        <td>
+                            <button class="btn btn-primary" ng-click="editar(usuario.id)"><i class="fa fa-pencil" title="Editar"></i></button>
+                            <button class="btn btn-danger" title="Excluir" ng-click="excluir(usuario.id)"><i class="fa fa-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr ng-show="!usuarios[0]">
+                        <td colspan="4">Sem registros.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/angular/usuario/usuario_controller.js') }}"></script>
+{% endblock %}
