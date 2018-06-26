@@ -44,35 +44,43 @@ AppBundle:
 
 Outras considerações relevantes:
 
-* O arquivo html base, chamase base.html.twig [app/Resources/views]
+* O arquivo html base, com importações css/js é o base.html.twig [app/Resources/views]
 
 * Não é necessário nenhuma importação no composer ou bower, todas as bibliotecas já estão incluídas;
 
 * Os únicos arquivos de configuração que necessitam de alteração nesta aplicação, são:
+
 parameters.yml [app/config]
+
 routing.yml [ApiRestBundle/Resources/config]
+
 services.yml [ApiRestBundle/Resources/config]
 
 
-* a pasta com os arquivos angular estão em [web/assets/angular_app]
+* a pasta com os arquivos angular estão em [web/js/angular]
 
 Configuração incial
 --------------
   Para inciar a aplicação é necessário seguir os seguintes passos:
 
   * **Configuração dos paramêtros**
+
   Configure o arquivo parameters.yml com seus dados de acesso ao banco de dados local;
 
   * [**Composer**][1]
+
   Executar o comando composer install
 
   * [**Banco de dados**][2]
+
   Executar os comandos:
+
    - php bin/console doctrine:database:create (para criar o schema do banco de dados)
 
    - php bin/console doctrine:schema:update --force (para criar as tabelas já existentes no banco)
 
   * [**Configurações de rota - FOSJsRoutingBundle**][4]
+
     Ao executar o composer install o bundle será importado, porém ainda é necesário executar
 
     php bin/console assets:install --symlink web
@@ -80,9 +88,11 @@ Configuração incial
     Obs.: sempre que for criada uma rota no ApiRestBundle, ou AppBundle é necessário rodar o comando php bin/console fos:js-routing:dump para gerar as rotas para o JS.
 
   * [**Bower**][3]
+
   Executar o comando bower install
 
   Obs.: No linux é necessário conseder permissão de acesso as pastas:
+
   /var/cache/
 
   /var/logs/
