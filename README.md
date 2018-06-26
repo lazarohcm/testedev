@@ -1,4 +1,4 @@
-Teste para desenvolvedor full-stack eQ!
+Teste para desenvolvedor full stack eQ!
 ========================
 
 Instruções para o teste;
