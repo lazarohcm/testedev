@@ -84,7 +84,9 @@ Configuração incial
 
   Obs.: No linux é necessário conseder permissão de acesso as pastas:
   /var/cache/
+
   /var/logs/
+
   /var/sessions
 
 Dúvidas
