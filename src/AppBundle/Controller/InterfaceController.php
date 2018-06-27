@@ -22,6 +22,14 @@ class InterfaceController extends Controller
     {
         return $this->render('AppBundle:interface/usuario:index.html.twig');
     }
+
+    /**
+     * @Route("/produto-index", name="produto_index", options={"expose"=true})
+     */
+    public function indexProductAction(Request $request)
+    {
+        return $this->render('AppBundle:interface/product:index.html.twig');
+    }
     /**
      * @Route("/usuario-cadastro", name="usuario_cadastro", options={"expose"=true})
      */

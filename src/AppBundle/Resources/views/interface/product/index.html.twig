@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="content" ng-controller="indexUsuarioController" ng-init="index()">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <h1>Produtos</h1>
+                <h4>Listagem</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <table class="table table-stripped table-bordered">
+                    <legend>
+                        <button class="btn btn-success pull-right" ng-click="cadastro();"><i class="fa fa-check"></i> Incluir</button>
+                    </legend>
+                    <thead>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="product in products" ng-show="products[0]">
+                        <td><% product.id %></td>
+                        <td><% product.name %></td>
+                        <td><% product.value %></td>
+                        <td>
+                            <button class="btn btn-primary" ng-click="editar(product.id)"><i class="fa fa-pencil" title="Editar"></i></button>
+                            <button class="btn btn-danger" title="Excluir" ng-click="excluir(product.id)"><i class="fa fa-times"></i></button>
+                        </td>
+                    </tr>
+                    <tr ng-show="!products[0]">
+                        <td colspan="4">Sem registros.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/angular/product/product_controller.js') }}"></script>
+{% endblock %}
