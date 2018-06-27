@@ -16,7 +16,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Class TbProduct
  *
  * @ORM\Table(name="tb_product")
- * @ORM\Entity()
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\TbProductRepository")
  */
 class TbProduct
 {
