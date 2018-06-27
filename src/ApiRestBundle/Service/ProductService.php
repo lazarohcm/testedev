@@ -33,7 +33,7 @@ class ProductService extends BaseService
 
     public function create(Request $request){
         $attributes = $request->get('product');
-
+        $attributes['value'] = floatval($attributes['value']);
         $product = new TbProduct();
         $form = $this->createForm($product);
         $form->submit($attributes);
@@ -46,7 +46,7 @@ class ProductService extends BaseService
     }
 
     public function edit(Request $request) {
-        $attributes = $request-get('product');
+        $attributes = $request->get('product');
 
         if(!isset($attributes['id'])) {
             throw new \Exception('THe provided is invalid');
@@ -54,7 +54,7 @@ class ProductService extends BaseService
 
         $product = $this->findById($attributes['id']);
 
-        $form = $this->creteForm($product);
+        $form = $this->createForm($product);
         $form->submit($attributes);
 
         if(!$form->isValid()) {
@@ -62,6 +62,13 @@ class ProductService extends BaseService
         }
 
         return $this->save($product);
+    }
+
+    public function delete($id) {
+        $product = $this->findById($id);
+        $this->em->remove($product);
+        $this->em->flush();
+        return true;
     }
 
 

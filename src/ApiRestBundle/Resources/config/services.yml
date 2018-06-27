@@ -9,3 +9,8 @@ services:
         parent: api.service.util.servico_base
         calls:
             - [setRepository, [AppBundle:TbUsuario]]
+    api.service.product:
+            class: ApiRestBundle\Service\ProductService
+            parent: api.service.util.servico_base
+            calls:
+                - [setRepository, [AppBundle:TbProduct]]

@@ -3,3 +3,8 @@ api_rest_usuario:
     resource: "ApiRestBundle:Usuario"
     type:     rest
     prefix:   /api/usuario
+
+api_rest_produto:
+        resource: "ApiRestBundle:Product"
+        type:     rest
+        prefix:   /api/produto
