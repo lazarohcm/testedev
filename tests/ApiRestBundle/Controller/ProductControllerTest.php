@@ -35,6 +35,14 @@ class ProductControllerTest extends WebTestCase
         $this->assertArrayHasKey('product', $response);
     }
 
+
+    public function testFindByIdError() {
+        $client = static::createClient();
+        $crawler = $client->request('GET', '/api/produto/find/-1');
+        $response = json_decode($client->getResponse()->getContent(), true);
+        $this->assertEquals($response, 'Product not found');
+    }
+
     /**
      * @depends testCreate
      */
