@@ -2,10 +2,10 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<div class="content" ng-controller="editarUsuarioController" ng-init="index({{id}})">
+<div class="content" ng-controller="editarProductController" ng-init="index({{id}})">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-            <h1>Usuário</h1>
+            <h1>Produto</h1>
             <h4>Editar</h4>
         </div>
     </div>
@@ -19,13 +19,13 @@
             >
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-                    {% include ('AppBundle:interface/usuario:form.html.twig') %}
+                    {% include ('AppBundle:interface/product:form.html.twig') %}
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
                     <button type="submit" class="btn btn-success pull-right"> Salvar</button>
-                    <a href="{{ path('usuario_index') }}" class="btn btn-primary pull-right"> Voltar</a>
+                    <a href="{{ path('product_index') }}" class="btn btn-primary pull-right"> Voltar</a>
                 </div>
             </div>
         </form>
@@ -34,5 +34,5 @@
 {% endblock %}
 
 {% block javascripts %}
-    <script src="{{ asset('js/angular/usuario/usuario_controller.js') }}"></script>
+    <script src="{{ asset('js/angular/product/product_controller.js') }}"></script>
 {% endblock %}

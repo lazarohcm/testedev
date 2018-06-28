@@ -24,7 +24,7 @@ class InterfaceController extends Controller
     }
 
     /**
-     * @Route("/produto-index", name="produto_index", options={"expose"=true})
+     * @Route("/product-index", name="product_index", options={"expose"=true})
      */
     public function indexProductAction(Request $request)
     {
@@ -45,6 +45,23 @@ class InterfaceController extends Controller
             )
         );
     }
+
+    /**
+     * @Route("/product-create", name="product_create", options={"expose"=true})
+     */
+    public function cadastroProductAction(Request $request)
+    {
+        $servico = $this->get('api.service.product');
+
+        $form = $servico->createForm();
+        return $this->render(
+            'AppBundle:interface/product:cadastro.html.twig',
+            array(
+                'form' => $form->createView(),
+            )
+        );
+    }
+
     /**
      * @Route("/usuario-editar/{id}", name="usuario_editar", options={"expose"=true})
      */
@@ -52,6 +69,19 @@ class InterfaceController extends Controller
     {
         return $this->render(
             'AppBundle:interface/usuario:editar.html.twig',
+            array(
+                'id' => $id,
+            )
+        );
+    }
+
+    /**
+     * @Route("/product-edit/{id}", name="product_edit", options={"expose"=true})
+     */
+    public function editarProductAction(Request $request, $id)
+    {
+        return $this->render(
+            'AppBundle:interface/product:editar.html.twig',
             array(
                 'id' => $id,
             )

@@ -8,10 +8,12 @@
     	</div>
 	</div>
   	<div class="row">
-	  	<div class="checkbox col-lg-8 col-md-8 col-xs-12 col-sm-12">
-	        <label>
-	        	<input type="checkbox" ng-model="product.value" ng-true-value="true" ng-false-value="false" ng-checked="usuario.situacao"><% usuario.situacao == '1' ? 'Ativo' : 'Inativo' %>
-	        </label>
+	  	<div class="col-lg-8 col-md-8 col-xs-12 col-sm-12">
+			<label>Valor:</label>
+			<div class="input-group">
+				<span class="input-group-addon">R$</span>
+				<input step="0.01" type="number" class="form-control" ng-model="product.value">
+			</div>
 		</div>
 	</div>
   </div>
