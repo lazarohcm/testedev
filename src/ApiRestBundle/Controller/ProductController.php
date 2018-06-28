@@ -107,7 +107,10 @@ class ProductController extends Controller
 
         }catch(\Exception $ex) {
             return $this->apiResponse($ex->getMessage(), 500);
+        }catch (NotFoundHttpException $ex) {
+            return $this->apiResponse($ex->getMessage(), 404);
         }
+
 
     }
 
@@ -125,6 +128,8 @@ class ProductController extends Controller
 
         }catch(\Exception $ex) {
             return $this->apiResponse($ex->getMessage(), 500);
+        }catch (NotFoundHttpException $ex) {
+            return $this->apiResponse($ex->getMessage(), 404);
         }
 
     }
